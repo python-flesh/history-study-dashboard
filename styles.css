@@ -194,25 +194,25 @@ main {
   overflow: hidden;
   padding: 30px 38px;
   border-radius: 28px;
-  color: #fdfbf6;
+  color: #593425;
   background:
-    linear-gradient(120deg, rgba(143, 67, 39, 0.97), rgba(205, 112, 62, 0.9)),
-    var(--forest);
-  box-shadow: 0 20px 48px rgba(143, 67, 39, 0.16);
+    linear-gradient(120deg, rgba(245, 207, 177, 0.98), rgba(234, 166, 116, 0.92)),
+    #edb083;
+  box-shadow: 0 20px 48px rgba(168, 100, 61, 0.13);
 }
 
 .hero-card .eyebrow {
-  color: rgba(255, 255, 255, 0.65);
+  color: rgba(115, 61, 39, 0.7);
 }
 
 .hero-card h2 {
   margin: 9px 0 11px;
-  color: #fffdf8;
+  color: #593425;
 }
 
 .hero-copy {
   max-width: 650px;
-  color: rgba(255, 255, 255, 0.76);
+  color: rgba(89, 52, 37, 0.78);
   font-size: 15px;
   line-height: 1.8;
 }
@@ -220,13 +220,13 @@ main {
 .hero-date {
   min-width: 118px;
   padding-left: 28px;
-  border-left: 1px solid rgba(255, 255, 255, 0.24);
+  border-left: 1px solid rgba(115, 61, 39, 0.22);
   text-align: center;
 }
 
 .hero-date span {
   display: block;
-  color: rgba(255, 255, 255, 0.64);
+  color: rgba(89, 52, 37, 0.66);
   font-size: 15px;
   letter-spacing: 0.2em;
 }
@@ -234,7 +234,7 @@ main {
 .hero-date strong {
   display: block;
   margin-top: 5px;
-  color: #fff;
+  color: #593425;
   font-family: Georgia, serif;
   font-size: 64px;
   font-weight: 500;
