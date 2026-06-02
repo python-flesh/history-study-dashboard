@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="中央民族大学中国史方向考研复习打卡面板"
+    />
+    <title>雪山书房 · 考研复习面板</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="brand">
+        <div class="brand-mark">史</div>
+        <div>
+          <p class="eyebrow">雪山书房</p>
+          <h1>中国史考研复习面板</h1>
+        </div>
+      </div>
+      <div class="target-badge">
+        <span class="badge-dot"></span>
+        中央民族大学 · 中国史
+      </div>
+    </header>
+
+    <nav class="main-nav" aria-label="主要页面">
+      <button class="nav-item active" data-view="today">今天</button>
+      <button class="nav-item" data-view="june">六月计划</button>
+      <button class="nav-item" data-view="route">长期路线</button>
+      <button class="nav-item" data-view="review">周复盘</button>
+    </nav>
+
+    <main>
+      <section class="view active" id="view-today" aria-labelledby="todayTitle">
+        <div class="hero-card">
+          <div>
+            <p class="eyebrow">第一轮复习 · 建立稳定节奏</p>
+            <h2 id="todayTitle">今天，踏实推进一点</h2>
+            <p class="hero-copy">
+              专业课是主线，英语每天保持输入，政治用肖 1000 题稳步推进。
+            </p>
+          </div>
+          <div class="hero-date">
+            <span id="heroMonth">六月</span>
+            <strong id="heroDay">01</strong>
+          </div>
+        </div>
+
+        <div class="date-toolbar">
+          <button class="icon-button" id="previousDay" aria-label="前一天">←</button>
+          <button class="date-button" id="selectedDateButton">2026年6月1日 · 星期一</button>
+          <button class="icon-button" id="nextDay" aria-label="后一天">→</button>
+          <button class="quiet-button" id="backToToday">回到今天</button>
+        </div>
+
+        <div class="metric-grid">
+          <article class="metric-card">
+            <p>连续打卡</p>
+            <strong><span id="streakValue">0</span><small>天</small></strong>
+          </article>
+          <article class="metric-card">
+            <p>今日完成</p>
+            <strong><span id="completionValue">0</span><small>%</small></strong>
+          </article>
+          <article class="metric-card">
+            <p>已完成时长</p>
+            <strong><span id="completedMinutes">0</span><small>分钟</small></strong>
+          </article>
+          <article class="metric-card">
+            <p>本周完成率</p>
+            <strong><span id="weekCompletionValue">0</span><small>%</small></strong>
+          </article>
+        </div>
+
+        <section class="panel weekly-panel" aria-labelledby="weeklyTitle">
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow">最近七天</p>
+              <h3 id="weeklyTitle">学习节奏</h3>
+            </div>
+            <p class="muted">点击日期切换当天任务</p>
+          </div>
+          <div class="week-strip" id="weekStrip"></div>
+        </section>
+
+        <section class="panel task-panel" aria-labelledby="taskTitle">
+          <div class="panel-heading task-heading">
+            <div>
+              <p class="eyebrow">今日清单</p>
+              <h3 id="taskTitle">完成比完美更重要</h3>
+            </div>
+            <div class="task-progress">
+              <span id="taskProgressText">0 / 0</span>
+              <div class="progress-track" aria-hidden="true">
+                <span id="taskProgressBar"></span>
+              </div>
+            </div>
+          </div>
+
+          <div id="taskGroups"></div>
+
+          <form class="add-task-form" id="addTaskForm">
+            <select id="newTaskSubject" aria-label="任务科目">
+              <option value="history">历史</option>
+              <option value="english">英语</option>
+              <option value="politics">政治</option>
+              <option value="general">其他</option>
+            </select>
+            <input
+              id="newTaskTitle"
+              type="text"
+              placeholder="临时加一项任务"
+              aria-label="新增任务名称"
+              required
+            />
+            <input
+              id="newTaskMinutes"
+              type="number"
+              min="5"
+              step="5"
+              value="30"
+              aria-label="预计分钟数"
+            />
+            <button type="submit" class="secondary-button">添加</button>
+          </form>
+        </section>
+
+        <section class="panel checkin-panel" aria-labelledby="noteTitle">
+          <div>
+            <p class="eyebrow">收尾两分钟</p>
+            <h3 id="noteTitle">留下今天的一句话</h3>
+          </div>
+          <textarea
+            id="dailyNote"
+            rows="3"
+            placeholder="例如：近代史条约容易混淆，明天整理一张横向比较表。"
+          ></textarea>
+          <div class="checkin-actions">
+            <p class="muted" id="checkinStatus">完成任务后，记得给今天盖个章。</p>
+            <button class="primary-button" id="checkinButton">完成今日打卡</button>
+          </div>
+        </section>
+      </section>
+
+      <section class="view" id="view-june" aria-labelledby="juneTitle">
+        <div class="page-heading">
+          <p class="eyebrow">2026 年 6 月 · 四周起步计划</p>
+          <h2 id="juneTitle">先把基本盘搭稳</h2>
+          <p>
+            六月的目标不是盲目追赶进度，而是建立一套能坚持到十二月的节奏。历史以长孙博教材为主，英语以真题精读为主，政治开始肖 1000 题第一轮。
+          </p>
+        </div>
+        <div class="week-plan-grid" id="junePlan"></div>
+
+        <div class="three-column-grid strategy-grid">
+          <article class="strategy-card history">
+            <p class="subject-label">历史 · 每周输出</p>
+            <h3>三项轻量练习</h3>
+            <ul>
+              <li>文言文翻译 1 段</li>
+              <li>史料题提纲 1 道</li>
+              <li>论述题提纲 1 道</li>
+            </ul>
+          </article>
+          <article class="strategy-card english">
+            <p class="subject-label">英语 · 每周底线</p>
+            <h3>六篇真题阅读</h3>
+            <ul>
+              <li>每天复习单词 40 分钟</li>
+              <li>精读真题阅读 6 篇</li>
+              <li>周末归纳错因与高频词</li>
+            </ul>
+          </article>
+          <article class="strategy-card politics">
+            <p class="subject-label">政治 · 每周抓手</p>
+            <h3>多选题单独统计</h3>
+            <ul>
+              <li>先理解精讲，再刷对应章节</li>
+              <li>错题回看教材</li>
+              <li>周末整理易混点</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="view" id="view-route" aria-labelledby="routeTitle">
+        <div class="page-heading">
+          <p class="eyebrow">6 月至 12 月 · 备考路线</p>
+          <h2 id="routeTitle">一眼看清接下来做什么</h2>
+          <p>
+            路线图用于把握方向。每周安排可以调整，但每个阶段的核心产出不要丢。
+          </p>
+        </div>
+        <div class="timeline" id="routeTimeline"></div>
+      </section>
+
+      <section class="view" id="view-review" aria-labelledby="reviewTitle">
+        <div class="page-heading">
+          <p class="eyebrow">每周一次 · 约二十分钟</p>
+          <h2 id="reviewTitle">复盘不是审判，是校准</h2>
+          <p>周日填写即可。记录真实情况，比写得漂亮更重要。</p>
+        </div>
+
+        <section class="panel review-form-panel">
+          <label class="field-label" for="reviewWeek">复盘周次</label>
+          <input id="reviewWeek" class="week-input" type="week" />
+
+          <label class="field-label" for="reviewWins">本周完成得不错的地方</label>
+          <textarea
+            id="reviewWins"
+            rows="4"
+            placeholder="例如：历史每天都按时推进；英语阅读精读没有偷懒。"
+          ></textarea>
+
+          <label class="field-label" for="reviewProblems">最需要解决的问题</label>
+          <textarea
+            id="reviewProblems"
+            rows="4"
+            placeholder="例如：政治多选题经常漏选，原因是教材理解不够扎实。"
+          ></textarea>
+
+          <label class="field-label" for="reviewNext">下周只调整三件事</label>
+          <textarea
+            id="reviewNext"
+            rows="4"
+            placeholder="例如：整理条约比较表；每天提前十分钟开始；周六补一篇英语阅读。"
+          ></textarea>
+
+          <div class="review-actions">
+            <p class="muted" id="reviewSaveStatus"></p>
+            <button class="primary-button" id="saveReview">保存本周复盘</button>
+          </div>
+        </section>
+
+        <section class="panel review-history-panel" aria-labelledby="historyTitle">
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow">过往记录</p>
+              <h3 id="historyTitle">复盘存档</h3>
+            </div>
+          </div>
+          <div id="reviewHistory"></div>
+        </section>
+
+        <section class="panel data-panel" aria-labelledby="dataTitle">
+          <div>
+            <p class="eyebrow">本地数据</p>
+            <h3 id="dataTitle">备份你的记录</h3>
+            <p class="muted">
+              数据只保存在当前浏览器。定期导出一份备份，换电脑时再导入即可。
+            </p>
+          </div>
+          <div class="data-actions">
+            <button class="secondary-button" id="exportData">导出备份</button>
+            <label class="secondary-button file-label" for="importData">导入备份</label>
+            <input id="importData" class="visually-hidden" type="file" accept="application/json" />
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <footer>
+      <p>雪山书房 · 每天推进一点，十二月会看见答案。</p>
+    </footer>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
