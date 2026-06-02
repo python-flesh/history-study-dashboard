@@ -1,6 +1,6 @@
 :root {
-  --paper: #faf4eb;
-  --paper-deep: #f0e2d4;
+  --paper: #f1f7ef;
+  --paper-deep: #e2eddf;
   --ink: #3b302c;
   --muted: #786b64;
   --line: rgba(114, 73, 52, 0.15);
@@ -31,8 +31,8 @@ body {
   min-height: 100vh;
   margin: 0;
   background:
-    radial-gradient(circle at 85% 6%, rgba(222, 145, 91, 0.16), transparent 26rem),
-    radial-gradient(circle at 10% 30%, rgba(191, 103, 61, 0.1), transparent 22rem),
+    radial-gradient(circle at 85% 6%, rgba(138, 178, 132, 0.18), transparent 26rem),
+    radial-gradient(circle at 10% 30%, rgba(176, 205, 163, 0.14), transparent 22rem),
     var(--paper);
 }
 
